@@ -27,6 +27,7 @@ describe ('Search', function() {
     });
     
     it('should update the video list when typing into the input box', function() {
+      console.log('failing test');
       var videoEntryTitleElements = scryRenderedDOMComponentsWithClass(app, 'video-list-entry-title');
       videoEntryTitleElements.forEach((videoEntryTitle, i) => {
         expect(videoEntryTitle.innerHTML).to.equal(fakeVideoData[i].snippet.title);
@@ -34,7 +35,7 @@ describe ('Search', function() {
 
       var searchInputElement = findRenderedDOMComponentWithClass(app, 'form-control');
       Simulate.change(searchInputElement, {target: {value: 'React tutorial'}});
-
+      
       var newVideoEntryTitleElements = scryRenderedDOMComponentsWithClass(app, 'video-list-entry-title');
       newVideoEntryTitleElements.forEach((videoEntryTitle, i) => {
         expect(videoEntryTitle.innerHTML).to.equal(moreFakeVideoData[i].snippet.title);

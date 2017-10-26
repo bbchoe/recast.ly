@@ -24,13 +24,13 @@ class App extends React.Component {
       playerVideo: loadedResults[0]
     });
   }
-  
+
   render() {
     return (
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <Search />
+            <Search appStateChanger={this.onSearchLoad.bind(this)} searchYouTube={this.props.searchYouTube} />
           </div>
         </nav>
         <div className="row">
