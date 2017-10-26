@@ -13,7 +13,7 @@ describe('App', function() {
       <App searchYouTube={() => {}}/>
     );
   });
-
+  //debugger;
   it('should be a stateful class component', function() {
     expect(React.Component.isPrototypeOf(App)).to.be.true;
   });
@@ -46,7 +46,7 @@ describe('App', function() {
     });
   });
 
-  xdescribe('when rendering live data from YouTube', function() {
+  describe('when rendering live data from YouTube', function() {
     var searchYouTubeStub;
 
     beforeEach(function() {
